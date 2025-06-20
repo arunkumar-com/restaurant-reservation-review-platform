@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-gray-900 antialiased bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-black text-white hover:bg-gray-900 focus:ring-gray-500;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-gray-900 border-gray-200 hover:bg-gray-50 focus:ring-gray-500;
+  }
+
+  .input {
+    @apply block w-full rounded-lg border-gray-200 shadow-sm focus:border-gray-500 focus:ring-gray-500 sm:text-sm transition-all duration-200;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .card {
+    @apply bg-white rounded-xl border border-gray-100 transition-all duration-300;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Modern Navigation Styles */
+  .nav-link {
+    @apply px-4 py-2 text-sm font-medium transition-all duration-200;
+  }
+
+  .nav-link-active {
+    @apply text-black;
+  }
+
+  .nav-link-default {
+    @apply text-gray-600 hover:text-black;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Rating stars */
+.star-rating {
+  @apply inline-flex items-center;
+}
+
+.star {
+  @apply text-black text-lg;
+}
+
+.star-empty {
+  @apply text-gray-200;
+}
+
+/* Table availability indicators */
+.table-available {
+  @apply bg-green-50 text-green-900 border-green-100;
+}
+
+.table-reserved {
+  @apply bg-red-50 text-red-900 border-red-100;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  @apply animate-spin rounded-full h-8 w-8 border-4 border-gray-200 border-t-black;
+}
+
+/* Form validation */
+.error-message {
+  @apply text-sm text-red-600 mt-1;
+}
+
+.success-message {
+  @apply text-sm text-green-600 mt-1;
+}
+
+/* Modern hover effects */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+/* Modern card hover effect */
+.card-hover {
+  @apply hover:shadow-xl hover:border-gray-200 transition-all duration-300;
+}
+
+/* Modern section spacing */
+.section-spacing {
+  @apply py-16 md:py-24;
+}
+
+/* Modern container padding */
+.container-padding {
+  @apply px-4 sm:px-6 lg:px-8;
+}
